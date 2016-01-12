@@ -1,0 +1,33 @@
+{
+  "name": "FitText-UMD",
+  "version": "1.0.0",
+  "author": "Peace Chen",
+  "contributors": ["Dave Rupert (https://github.com/davatron5000)", "Jeremy Keith (https://github.com/adactio)"],
+  "license": "WTFPL",
+  "description": "FitText dynamically sizes text to fit the container (UMD version)",
+  "keywords": [ "FitText", "FitText.js", "FitText-UMD", "font", "size", "dynamic", "responsive", "UMD"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peacechen/FitText-UMD"
+  },
+  "bugs": "https://github.com/peacechen/FitText-UMD/issues",
+  "main": "fittext.js",
+  "scripts": {
+    "example": "npm run build-example && npm run serve",
+    "build-example": "node node_modules/browserify/bin/cmd.js example/requireExample.js -d > example/example.js",
+    "serve": "node node_modules/serve/bin/serve example/ -p 8080"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.0.15",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "serve": "^1.4.0"
+  },
+  "dependencies": {
+  }
+}
