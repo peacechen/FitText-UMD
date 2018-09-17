@@ -25,6 +25,15 @@ fitText( document.getElementById("responsive_headline"), 0.8 ); // turn the comp
 ```
 This will hopefully give you a level of "control" that might not be pixel perfect, but scales smoothly & nicely.
 
+## minFontSize & maxFontSize
+FitText now allows you to specify two optional pixel values: `minFontSize` and `maxFontSize`. Great for situations when you want to preserve hierarchy.
+
+```javascript
+fitText( document.getElementById("responsive_headline"), 1, { minFontSize: '20px', maxFontSize: '40px' });
+```
+
+These options are passed to the `fitText` function right after the compressor value (here `1`).
+
 ### To Do
 With the removal of jQuery, element resize events are no longer available. jQuery uses an inefficient polling method to detect element resizing so a better solution is needed anyway.  One potential candidate:  
 https://github.com/marcj/css-element-queries
